@@ -1,5 +1,8 @@
 import { motion } from "framer-motion";
 import Navbar from "./Navbar";
+import Switch from "./Switch";
+import ScaleChildFix from "./ScaleChildFix";
+import TabularCard from "./TabularCard";
 
 const App = () => {
   return (
@@ -32,6 +35,15 @@ const App = () => {
       </div>
       <div className="wrap">
         <Navbar />
+      </div>
+      <div className="wrap pink-blue-gradient">
+        <Switch />
+      </div>
+      <div className="wrap pink-blue-gradient">
+        <ScaleChildFix />
+      </div>
+      <div className="wrap">
+        <TabularCard />
       </div>
     </>
   );
