@@ -3,8 +3,11 @@ import Navbar from "./Navbar";
 import Switch from "./Switch";
 import ScaleChildFix from "./ScaleChildFix";
 import TabularCard from "./TabularCard";
+import { useRef } from "react";
 
 const App = () => {
+  const constraintsRef = useRef(null);
+
   return (
     <>
       <h1>Framer Motion - React Animation Library</h1>
@@ -51,6 +54,14 @@ const App = () => {
           whileHover={{ scale: 1.1 }}
           whileTap={{ scale: 0.9 }}
           transition={{ type: "spring", stiffness: 400, damping: 14 }}
+        />
+      </div>
+      <div className="wrap">
+        <motion.div className="drag-area" ref={constraintsRef} />
+        <motion.div
+          className="draggable"
+          drag
+          dragConstraints={constraintsRef}
         />
       </div>
     </>

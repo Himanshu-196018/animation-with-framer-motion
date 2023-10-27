@@ -230,3 +230,18 @@ li.selected {
   border-radius: 50px;
   cursor: pointer;
 }
+
+.drag-area {
+  opacity: 0.2;
+  background-color: #fff;
+  width: 300px;
+  height: 300px;
+  border-radius: 30px;
+}
+
+.draggable {
+  background-color: #fff;
+  width: 150px;
+  height: 150px;
+  border-radius: 30px;
+}
