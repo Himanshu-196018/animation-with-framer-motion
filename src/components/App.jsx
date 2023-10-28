@@ -3,6 +3,7 @@ import Navbar from "./Navbar";
 import Switch from "./Switch";
 import ScaleChildFix from "./ScaleChildFix";
 import TabularCard from "./TabularCard";
+import ScrollCard from "./ScrollCard";
 import { useRef } from "react";
 
 const App = () => {
@@ -57,12 +58,16 @@ const App = () => {
         />
       </div>
       <div className="wrap">
-        <motion.div className="drag-area" ref={constraintsRef} />
-        <motion.div
-          className="draggable"
-          drag
-          dragConstraints={constraintsRef}
-        />
+        <motion.div className="drag-area" ref={constraintsRef}>
+          <motion.div
+            className="draggable"
+            drag
+            dragConstraints={constraintsRef}
+          />
+        </motion.div>
+      </div>
+      <div className="scroll-card-container">
+        <ScrollCard />
       </div>
     </>
   );
