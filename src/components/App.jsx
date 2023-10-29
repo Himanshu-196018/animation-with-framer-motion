@@ -5,6 +5,7 @@ import ScaleChildFix from "./ScaleChildFix";
 import TabularCard from "./TabularCard";
 import ScrollCard from "./ScrollCard";
 import TrackProgress from "./TrackProgress";
+import ScrollVelocity from "./ScrollVelocity";
 import { useRef } from "react";
 
 const App = () => {
@@ -79,6 +80,9 @@ const App = () => {
       </div>
       <div className="wrap b-top">
         <TrackProgress />
+      </div>
+      <div className="wrap SV-body">
+        <ScrollVelocity />
       </div>
     </>
   );

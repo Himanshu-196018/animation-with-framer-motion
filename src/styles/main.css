@@ -14,6 +14,7 @@
 html {
   font-size: 62.5%;
   font-family: sans-serif;
+  scroll-snap-type: y mandatory;
 }
 
 body {
@@ -359,4 +360,33 @@ circle {
   margin-block: 20px;
   border: 2px dotted hsl(90, 100%, 40%);
   position: relative;
+}
+
+/* scroll velocity component */
+.SV-body {
+  padding-block: 45vh;
+}
+
+.parallax {
+  overflow: hidden;
+  letter-spacing: -2px;
+  line-height: 0.8;
+  margin: 0;
+  white-space: nowrap;
+  display: flex;
+  flex-wrap: nowrap;
+  color: #fff;
+}
+.parallax .scroller {
+  font-weight: 600;
+  text-transform: uppercase;
+  font-size: 64px;
+  display: flex;
+  white-space: nowrap;
+  flex-wrap: nowrap;
+}
+
+.parallax span {
+  display: block;
+  margin-right: 30px;
 }
