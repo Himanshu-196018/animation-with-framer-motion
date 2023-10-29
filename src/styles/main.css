@@ -248,9 +248,16 @@ li.selected {
 
 /* scrollable animation's style */
 .scroll-card-container {
-  margin: 100px auto;
+  margin: 100px auto 100px;
   max-width: 500px;
+  height: 700px;
+  overflow-y: scroll;
+
+  &::-webkit-scrollbar {
+    width: 0;
+  }
 }
+
 .card {
   font-size: 164px;
   width: 300px;
@@ -276,10 +283,6 @@ li.selected {
   margin-bottom: -100px;
 }
 
-.card-container:last-of-type {
-  margin-bottom: 50px;
-}
-
 .splash {
   position: absolute;
   bottom: 0;
@@ -289,4 +292,71 @@ li.selected {
   clip-path: path(
     "M 0 303.5 C 0 292.454 8.995 285.101 20 283.5 L 460 219.5 C 470.085 218.033 480 228.454 480 239.5 L 500 430 C 500 441.046 491.046 450 480 450 L 20 450 C 8.954 450 0 441.046 0 430 Z"
   );
+}
+
+.b-top {
+  border-top: 2px solid #222;
+}
+
+.progress-bar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 10px;
+  background: red;
+  transform-origin: 0%;
+  z-index: 10000;
+}
+
+/* TrackProgress component */
+.progress {
+  position: sticky;
+  top: 0;
+  width: 80px;
+  height: 80px;
+  margin: 0;
+  padding: 0;
+}
+
+.progress svg {
+  transform: translateX(-100px) rotate(-90deg);
+}
+
+circle {
+  stroke-dashoffset: 0;
+  stroke-width: 5%;
+  fill: none;
+}
+
+.bg {
+  stroke: hsl(90, 100%, 20%);
+  opacity: 0.2;
+}
+
+.progress .indicator {
+  stroke: hsl(90, 100%, 60%);
+}
+
+.b-top::-webkit-scrollbar {
+  height: 12px;
+  width: 5px;
+  background: black;
+}
+
+.b-top::-webkit-scrollbar-thumb {
+  background: #ccc;
+  -webkit-border-radius: 1ex;
+}
+
+.b-top::-webkit-scrollbar-corner {
+  background-color: black;
+}
+
+.progress-box {
+  width: 200px;
+  height: 300px;
+  margin-block: 20px;
+  border: 2px dotted hsl(90, 100%, 40%);
+  position: relative;
 }

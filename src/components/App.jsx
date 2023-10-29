@@ -1,16 +1,24 @@
-import { motion } from "framer-motion";
+import { motion, useScroll, useSpring } from "framer-motion";
 import Navbar from "./Navbar";
 import Switch from "./Switch";
 import ScaleChildFix from "./ScaleChildFix";
 import TabularCard from "./TabularCard";
 import ScrollCard from "./ScrollCard";
+import TrackProgress from "./TrackProgress";
 import { useRef } from "react";
 
 const App = () => {
   const constraintsRef = useRef(null);
+  const { scrollYProgress } = useScroll();
+  const scaleX = useSpring(scrollYProgress, {
+    stiffness: 100,
+    damping: 30,
+    restDelta: 0.001,
+  });
 
   return (
     <>
+      <motion.div className="progress-bar" style={{ scaleX }} />
       <h1>Framer Motion - React Animation Library</h1>
       <div className="wrap">
         <motion.div
@@ -68,6 +76,9 @@ const App = () => {
       </div>
       <div className="scroll-card-container">
         <ScrollCard />
+      </div>
+      <div className="wrap b-top">
+        <TrackProgress />
       </div>
     </>
   );
