@@ -7,6 +7,7 @@ import ScrollCard from "./ScrollCard";
 import TrackProgress from "./TrackProgress";
 import ScrollVelocity from "./ScrollVelocity";
 import { useRef } from "react";
+import SpringTrackMouse from "./SpringTrackMouse";
 
 const App = () => {
   const constraintsRef = useRef(null);
@@ -83,6 +84,9 @@ const App = () => {
       </div>
       <div className="wrap SV-body">
         <ScrollVelocity />
+      </div>
+      <div className="wrap track-container">
+        <SpringTrackMouse />
       </div>
     </>
   );

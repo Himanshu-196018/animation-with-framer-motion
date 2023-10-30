@@ -390,3 +390,18 @@ circle {
   display: block;
   margin-right: 30px;
 }
+
+.track-container {
+  overflow: hidden;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.circle {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  background-color: #fff;
+}
