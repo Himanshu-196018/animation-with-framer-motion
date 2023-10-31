@@ -405,3 +405,16 @@ circle {
   border-radius: 50%;
   background-color: #fff;
 }
+
+.svg-line {
+  height: 600px;
+  background-color: #222;
+}
+
+.svg-line circle,
+.svg-line rect,
+.svg-line line {
+  stroke-width: 10px;
+  stroke-linecap: round;
+  fill: transparent;
+}

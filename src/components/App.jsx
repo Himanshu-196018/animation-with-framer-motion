@@ -6,6 +6,7 @@ import TabularCard from "./TabularCard";
 import ScrollCard from "./ScrollCard";
 import TrackProgress from "./TrackProgress";
 import ScrollVelocity from "./ScrollVelocity";
+import SvgLines from "./SvgLines";
 import { useRef } from "react";
 import SpringTrackMouse from "./SpringTrackMouse";
 
@@ -87,6 +88,9 @@ const App = () => {
       </div>
       <div className="wrap track-container">
         <SpringTrackMouse />
+      </div>
+      <div className="wrap svg-line">
+        <SvgLines />
       </div>
     </>
   );
