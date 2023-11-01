@@ -7,6 +7,7 @@ import ScrollCard from "./ScrollCard";
 import TrackProgress from "./TrackProgress";
 import ScrollVelocity from "./ScrollVelocity";
 import SvgLines from "./SvgLines";
+import AnimPresenceComp from "./AnimPresenceComp";
 import { useRef } from "react";
 import SpringTrackMouse from "./SpringTrackMouse";
 
@@ -91,6 +92,9 @@ const App = () => {
       </div>
       <div className="wrap svg-line">
         <SvgLines />
+      </div>
+      <div className="wrap">
+        <AnimPresenceComp />
       </div>
     </>
   );
