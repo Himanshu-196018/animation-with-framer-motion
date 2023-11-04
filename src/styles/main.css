@@ -488,3 +488,38 @@ label {
   flex-direction: column;
   align-items: center;
 }
+
+/* Reorder tab component */
+.reorder-tabs h2 {
+  font-size: 3.4rem;
+  text-align: center;
+  margin-bottom: 3rem;
+  color: #eee;
+}
+
+.reorder-tabs ul,
+.reorder-tabs li {
+  list-style: none;
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  font-size: 24px;
+}
+
+.reorder-tabs ul {
+  position: relative;
+  width: 300px;
+}
+
+.reorder-tabs li {
+  border-radius: 10px;
+  margin-bottom: 10px;
+  width: 100%;
+  padding: 15px 18px;
+  position: relative;
+  background: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-shrink: 0;
+  cursor: grab;
+}

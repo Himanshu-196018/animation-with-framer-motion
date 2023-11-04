@@ -8,6 +8,7 @@ import TrackProgress from "./TrackProgress";
 import ScrollVelocity from "./ScrollVelocity";
 import SvgLines from "./SvgLines";
 import AnimPresenceComp from "./AnimPresenceComp";
+import ReorderTabs from "./ReorderTabs";
 import { useRef } from "react";
 import SpringTrackMouse from "./SpringTrackMouse";
 
@@ -95,6 +96,10 @@ const App = () => {
       </div>
       <div className="wrap">
         <AnimPresenceComp />
+      </div>
+      <div className="wrap reorder-tabs">
+        <h2>Try Reorder</h2>
+        <ReorderTabs />
       </div>
     </>
   );
