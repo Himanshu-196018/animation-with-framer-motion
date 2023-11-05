@@ -523,3 +523,9 @@ label {
   flex-shrink: 0;
   cursor: grab;
 }
+
+.reorder-tabs li svg {
+  width: 18px;
+  height: 18px;
+  cursor: grab;
+}
